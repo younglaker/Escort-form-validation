@@ -3,7 +3,7 @@
 div {
 	border: 1px solid #000;
 }
-a {
+.classify_nav li a, .lassify_nav_phone li a, .time_picker li a {
 	display: block;
 }
 a:hover {
@@ -84,16 +84,15 @@ a:hover {
 }
 
 
-
-
-
-
-
-
-
-
 /***********    activitie_list   *************/
 
+/***********    hot_activities   *************/
+.hot_activities ul {
+	margin-left: 0px;
+}
+.hot_activities ul li {
+	margin-bottom: 10px;
+}
 
 
 
