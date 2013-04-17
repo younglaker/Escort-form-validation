@@ -1,19 +1,46 @@
+/**************************    public    ****************************/
 
 div {
 	border: 1px solid #000;
 }
+a {
+	display: block;
+}
+a:hover {
+	text-decoration: none;
+}
+/**************************    /public    ****************************/
 
+
+/**************************    main content    ****************************/
+/***********    classify_nav   *************/
 .classify_nav {
 	padding: 10px;
 }
 .classify_nav li {
 	margin-bottom: 5px;
+	padding-left: 5px;
+	padding: 7px;
+}
+.classify_nav_phone {
+	width: 100%;
+	min-height: 50px;
+}
+.classify_nav_phone li {
+	float: left;
+	padding: 3px;
+}
+.classify_nav li.act, .lassify_nav_phone li.act {
+	background: #6EBA7B;
+}
+.classify_nav li:hover, .lassify_nav_phone li:hover {
+	background: #6EBA7B;
 }
 
-.ad_box {
+/***********    /classify_nav   *************/
 
-}
 
+/***********    time_picker   *************/
 .time_picker {
 	height: 30px;
 	margin: 0px;
@@ -22,18 +49,38 @@ div {
 .time_picker li {
 	float: left;
 	margin-right: 5px;
-	padding: 3px;
+	padding: 5px;
+}
+.time_picker li:hover {
+	background: #6EBA7B;
 }
 .time_picker li.act {
 	background: #6EBA7B;
 }
 
+/***********    /time_picker   *************/
+
+
+/***********    activitie_list   *************/
 .activitie_list_box {
 	min-height: 200px;
+	margin-bottom: 20px;
 	padding: 10px;
 }
-.activitie_list_box img {
-	width: 100px;
+.activitie_list_box h3 {
+	height: 35px;
+	overflow: hidden;
+}
+.activitie_list_box dt {
+	width: 78px;
+	float: left;
+}
+.activitie_list_box dd {
+	width: 375px;
+	float: left;
+}
+.activitie_list_box dt, .activitie_list_box dd {
+	margin-bottom: 5px;
 }
 
 
@@ -45,6 +92,7 @@ div {
 
 
 
+/***********    activitie_list   *************/
 
 
 
@@ -62,3 +110,4 @@ div {
 
 
 
+/**************************   / main content    ****************************/

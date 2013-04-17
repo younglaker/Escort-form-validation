@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +16,10 @@
 <body>
     <!-- header -->
 	<div class="navbar">
+		<!--.navbar -->
 		<div class="navbar-inner">
 			<div class="container-fluid">
+
 				<!-- 为了窄屏时，标签合在一起 -->
 				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 					<span class="icon-bar"></span>
@@ -25,16 +27,27 @@
 					<span class="icon-bar"></span>
 				</a>
 				<!-- /为了窄屏时，标签合在一起 -->
+
 				<a class="brand" href="#" name="top">乐活</a>
+
 				<div class="nav-collapse collapse">
+
 					<ul class="nav">
-						<li><a href="#"><i class="icon-home"></i> Home</a></li>
+						<li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
 						<li class="divider-vertical"></li>
-						<li class="active"><a href="#"><i class="icon-file"></i> Pages</a></li>
+						<li><a href="#"><i class="icon-file"></i> Pages</a></li>
 						<li class="divider-vertical"></li>
 						<li><a href="#"><i class="icon-envelope"></i> Messages</a></li>
 						<li class="divider-vertical"></li>
 					</ul>
+
+					<form class="navbar-form form-search pull-left" method="" action="" accept-charset="UTF-8">
+						<div class="input-append">
+							<input type="text" name="q" class="span2 search-query" placeholder="找找有趣的活动">
+							<button type="submit" class="btn">搜索</button>
+						</div>
+					</form>
+
 					<div class="btn-group pull-right">
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 							<i class="icon-user"></i> admin	<span class="caret"></span>
@@ -47,6 +60,7 @@
 					</div>
 				</div>
 				<!--/.nav-collapse -->
+
 			</div>
 			<!--/.container-fluid -->
 		</div>
@@ -55,11 +69,13 @@
 	<!--/.navbar -->
     <!--/ header -->
 
-	<div class="span12 visible-desktop"><img src="img/bg_dsp_03.png"></div>
+<div class="container">
+	<div class="visible-desktop"><img src="img/bg_dsp_03.png"></div>
 
-	<div class="row">
-		<div class="span2 classify_nav hidden-phone">
+	<div class="">
+		<div class="span1 classify_nav hidden-phone">
 			<ul>
+				<li class="act"><a href="">全部</a></li>
 				<li><a href="">讲座</a></li>
 				<li><a href="">招聘</a></li>
 				<li><a href="">娱乐</a></li>
@@ -71,7 +87,25 @@
 				<li><a href="">其他</a></li>
 			</ul>
 		</div>
+
+		<div class="classify_nav_phone visible-phone">
+			<ul>
+				<li class="act"><a href="">全部</a></li>
+				<li><a href="">讲座</a></li>
+				<li><a href="">招聘</a></li>
+				<li><a href="">娱乐</a></li>
+				<li><a href="">比赛</a></li>
+				<li><a href="">招新</a></li>
+				<li><a href="">出游</a></li>
+				<li><a href="">活动</a></li>
+				<li><a href="">公益</a></li>
+				<li><a href="">其他</a></li>
+			</ul>
+		</div>
+
+		<!-- activities list -->
 		<div class="span8">
+
 			<ul class="time_picker">
 				<li>时间：</li>
 				<li class="act"><a href="">全部</a></li>
@@ -79,15 +113,75 @@
 				<li><a href="">明天</a></li>
 				<li><a href="">最近一周</a></li>
 			</ul>
+
 			<div class="activitie_list_block">
+
 				<div class="activitie_list_box">
-					<img src="img/post.jpg">
+					<div class="span2 hidden-phone">
+						<img src="img/post.jpg">
+					</div>
+					<div class="span5">
+						<h3><a href="">比特工场招新比特工场招新比特工场招新比特工场招新比特工场招新比特工场招新比特工场招新比特工场招新比特工场招新</a></h3>
+						<dl>
+							<dt>开始时间：</dt>
+							<dd>2013-08-14 20:00 星期一</dd>
+							<dt>活动地点：</dt>
+							<dd>大活105</dd>
+							<dt>活动类型：</dt>
+							<dd>招新</dd>
+							<dt>组织者：</dt>
+							<dd><a href="">比特工场</a></dd>
+						</dl>
+					</div>
 				</div>
+
+				<div class="activitie_list_box">
+					<div class="span2 hidden-phone">
+						<img src="img/post.jpg">
+					</div>
+					<div class="span5">
+						<h3><a href="">比特工场招新比特工场招新比特工场招新比特工场招新比特工场招新比特工场招新比特工场招新比特工场招新比特工场招新</a></h3>
+						<dl>
+							<dt>开始时间：</dt>
+							<dd>2013-08-14 20:00 星期一</dd>
+							<dt>活动地点：</dt>
+							<dd>大活105</dd>
+							<dt>活动类型：</dt>
+							<dd>招新</dd>
+							<dt>组织者：</dt>
+							<dd><a href="">比特工场</a></dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="activitie_list_box">
+					<div class="span2 hidden-phone">
+						<img src="img/post.jpg">
+					</div>
+					<div class="span5">
+						<h3><a href="">比特工场招新比特工场招新比特工场招新比特工场招新比特工场招新比特工场招新比特工场招新比特工场招新比特工场招新</a></h3>
+						<dl>
+							<dt>开始时间：</dt>
+							<dd>2013-08-14 20:00 星期一</dd>
+							<dt>活动地点：</dt>
+							<dd>大活105</dd>
+							<dt>活动类型：</dt>
+							<dd>招新</dd>
+							<dt>组织者：</dt>
+							<dd><a href="">比特工场</a></dd>
+						</dl>
+					</div>
+				</div>
+				
 			</div>
 		</div>
-		<div class="span3">...</div>
+		<!-- /activities list -->
+
+		<div class="span2">...</div>
 	</div>
-<div class="span2" style="height:300px;"></div>
+<div class="span11" style="height:300px;"></div></div>
+
+
 </body>
 
 </html>
