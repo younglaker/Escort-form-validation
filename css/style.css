@@ -1,15 +1,40 @@
 
-
-.nav_title {
-	color: #fff;
+div {
+	border: 1px solid #000;
 }
 
+.classify_nav {
+	padding: 10px;
+}
+.classify_nav li {
+	margin-bottom: 5px;
+}
 
+.ad_box {
 
+}
 
+.time_picker {
+	height: 30px;
+	margin: 0px;
+	padding: 10px;
+}
+.time_picker li {
+	float: left;
+	margin-right: 5px;
+	padding: 3px;
+}
+.time_picker li.act {
+	background: #6EBA7B;
+}
 
-
-
+.activitie_list_box {
+	min-height: 200px;
+	padding: 10px;
+}
+.activitie_list_box img {
+	width: 100px;
+}
 
 
 
