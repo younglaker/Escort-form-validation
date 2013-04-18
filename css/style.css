@@ -109,9 +109,21 @@ a:hover {
 	width: 50px;
 	float: left;
 	margin-right: 15px;
+	margin-bottom: 15px;
 }
 
 /***********    hot_organizations   *************/
+
+/***********    footer   *************/
+.footer {
+	text-align: center;
+}
+.footer .info a {
+	margin-left: 5px;
+}
+
+
+/***********    footer   *************/
 
 
 
