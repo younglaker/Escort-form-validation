@@ -42,9 +42,10 @@ a:hover {
 
 /***********    time_picker   *************/
 .time_picker {
-	height: 30px;
+	min-height: 30px;
 	margin: 0px;
 	padding: 10px;
+	overflow: hidden;
 }
 .time_picker li {
 	float: left;
@@ -66,6 +67,7 @@ a:hover {
 	min-height: 200px;
 	margin-bottom: 20px;
 	padding: 10px;
+	overflow: hidden;
 }
 .activitie_list_box h3 {
 	height: 35px;
