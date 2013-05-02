@@ -1,0 +1,46 @@
+/**************************    public    ****************************/
+
+div {
+	/*border: 1px solid #000;*/
+}
+.classify_nav li a, .lassify_nav_phone li a, .time_picker li a {
+	display: block;
+}
+a:hover {
+	text-decoration: none;
+}
+/**************************    /public    ****************************/
+
+
+/***********    footer   *************/
+.footer {
+	text-align: center;
+}
+.footer .info a {
+	margin-left: 5px;
+}
+
+
+/***********    footer   *************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************   / main content    ****************************/
+
+
+/**************************    @media    ****************************/
+@media (max-width: 480px) {
+    .hot_organizations ul li { margin: 10px; }
+}
+
+/**************************   / @media    ****************************/
