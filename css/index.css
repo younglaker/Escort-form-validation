@@ -12,14 +12,18 @@
 	width: 100%;
 	min-height: 50px;
 }
+.classify_nav_phone ul {
+	margin: 0;
+}
 .classify_nav_phone li {
 	float: left;
+	margin-right: 5px;
 	padding: 3px;
 }
-.classify_nav li.act, .lassify_nav_phone li.act {
+.classify_nav li.act, .classify_nav_phone li.act {
 	background: #6EBA7B;
 }
-.classify_nav li:hover, .lassify_nav_phone li:hover {
+.classify_nav li a:hover, .classify_nav_phone li a:hover {
 	background: #6EBA7B;
 }
 
@@ -30,7 +34,7 @@
 .time_picker {
 	min-height: 30px;
 	margin: 0px;
-	padding: 10px;
+	padding: 10px 0 10px 0;
 	overflow: hidden;
 }
 .time_picker li {
@@ -38,8 +42,9 @@
 	margin-right: 5px;
 	padding: 5px;
 }
-.time_picker li:hover {
+.time_picker li a:hover {
 	background: #6EBA7B;
+	display: block;
 }
 .time_picker li.act {
 	background: #6EBA7B;
@@ -53,11 +58,14 @@
 	min-height: 200px;
 	margin-bottom: 20px;
 	padding: 10px;
+	border-bottom: 1px solid #999AA1;
 	overflow: hidden;
 }
 .activitie_list_box h3 {
-	height: 35px;
+	height: 54px;
 	overflow: hidden;
+	font-size: 22px;
+	line-height: 28px;
 }
 .activitie_list_box dt {
 	width: 78px;

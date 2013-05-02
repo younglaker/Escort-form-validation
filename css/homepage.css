@@ -1,0 +1,24 @@
+.user_profile h3 {
+	height: 35px;
+	overflow: hidden;
+}
+.user_profile dt {
+	width: 78px;
+	float: left;
+}
+.user_profile dd {
+	width: 375px;
+	float: left;
+}
+.user_profile dt, .user_profile dd {
+	margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
