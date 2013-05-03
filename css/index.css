@@ -74,6 +74,7 @@
 .activitie_list_box dd {
 	width: 375px;
 	float: left;
+	margin: 0;
 }
 .activitie_list_box dt, .activitie_list_box dd {
 	margin-bottom: 5px;

@@ -9,12 +9,38 @@
 .user_profile dd {
 	width: 375px;
 	float: left;
+	margin: 0;
 }
 .user_profile dt, .user_profile dd {
 	margin-bottom: 5px;
 }
 
-
+/***********    activitie_list   *************/
+.activitie_list_box {
+	min-height: 200px;
+	margin-bottom: 20px;
+	padding: 10px;
+	border-bottom: 1px solid #999AA1;
+	overflow: hidden;
+}
+.activitie_list_box h3 {
+	height: 54px;
+	overflow: hidden;
+	font-size: 22px;
+	line-height: 28px;
+}
+.activitie_list_box dt {
+	width: 78px;
+	float: left;
+}
+.activitie_list_box dd {
+	width: 375px;
+	float: left;
+	margin: 0;
+}
+.activitie_list_box dt, .activitie_list_box dd {
+	margin-bottom: 5px;
+}
 
 
 
