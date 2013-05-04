@@ -32,9 +32,9 @@
 				<div class="nav-collapse collapse">
 
 					<ul class="nav">
-						<li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+						<li><a href="#"><i class="icon-home"></i> Home</a></li>
 						<li class="divider-vertical"></li>
-						<li><a href="#"><i class="icon-file"></i> Pages</a></li>
+						<li class="active"><a href="homepage.html"><i class="icon-file"></i> Pages</a></li>
 						<li class="divider-vertical"></li>
 						<li><a href="#"><i class="icon-envelope"></i> Messages</a></li>
 						<li class="divider-vertical"></li>
@@ -65,29 +65,36 @@
 		</div>
 		<!--/.navbar-inner -->
 	</div>
-	<!--/.navbar -->
     <!--/ header -->
 
 	<!-- container -->
-	<div class="container">
-		<div class="span10">
+	<div class="container homepage_container">
+		<div class="span10 ">
+
+			<!-- user_basic_info -->
 			<div class="row">
-				<div class="span8">
+				<div class="span9">
 				    <div class="row">
-				    	<div class="span2">
-							<div class="span2  hidden-phone">
-								<img src="img/user_gravator_large.png">
-							</div>
-				    	</div>
+						<div class="span2  hidden-phone">
+							<img src="img/user_gravator_large.png">
+						</div>
 				    	<div class="span6 user_profile">
-							<h3><a href="">昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称</a></h3>
+							<h3><a href="">aaa昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称昵称</a></h3>
 							<p>个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍个人简绍</p>
+							<p>
+								<button class="btn-success">勾搭他</button>
+								<button class="btn-success">勾搭成功</button>
+							</p>
 				    	</div>
+				    	
 				    </div>
 				</div>
 			</div>
+			<!-- /user_basic_info -->
+
 			<hr>
 
+			<!-- main-->
 			<div class="row">
 
 				<!-- activitie_list_block -->
@@ -149,19 +156,45 @@
 							</dl>
 						</div>
 					</div>
-				</div>
-			<!-- /activitie_list_block -->
 
-			<!-- info_nav -->
-			<ul class="span2">
-				<li><a href="">参与的活动</a></li>
-				<li><a href="">发起的活动</a></li>
-				<li><a href="">关注的人/组织</a></li>
-			</ul>
-			<!-- /info_nav -->
+					<!-- pager -->
+					<div class="pagers pagination pagination-centered span8">
+						<ul>
+			                <li><a href="#">«</a></li>
+			                <li><a class="act" href="#">1</a></li>
+			                <li><a href="#">2</a></li>
+			                <li><a href="#">3</a></li>
+			                <li><a href="#">4</a></li>
+			                <li><a href="#">5</a></li>
+			                <li><a href="#">»</a></li>
+			             </ul>
+					</div>
+					<!-- /pager -->
+
+				</div>
+				<!-- /activitie_list_block -->
+
+				<!-- info_nav -->
+				<ul class="span2 hidden-phone homepage_tab">
+					<li class="act">参与的活动</li>
+					<li><a href="">发起的活动</a></li>
+					<li><a href="">关注的人/组织</a></li>
+				</ul>
+				<!-- /info_nav -->		
+
+			</div>
+			<!--/ main -->
+
+		    <!-- phone_footer -->
+			<div class="footer_nav navbar navbar-inverse navbar-fixed-bottom visible-phone">
+				<ul class="navbar-inner">
+					<li><a href="">参与的活动</a></li>
+				</ul>
+			</div>
+		    <!-- /phone_footer -->
 
 			<!-- foorer -->
-			<div class="span11 footer">
+			<div class="span11 footer visible-desktop">
 				<p class="info">
 					<a href="" target="_blank">关于我们</a>
 					<a href="" target="_blank">加入我们</a>
@@ -180,8 +213,7 @@
 	</div>
 	<!-- /container -->
 
-<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
-<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="js/sizzle.js"></script>
 <script type="text/javascript" src="js/mainjs.js"></script>
 </body>
 

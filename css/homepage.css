@@ -1,3 +1,7 @@
+.homepage_container {
+	max-width: 1000px;
+}
+
 .user_profile h3 {
 	height: 35px;
 	overflow: hidden;
@@ -42,9 +46,29 @@
 	margin-bottom: 5px;
 }
 
+.homepage_tab {
+	margin-left: -1px;
+}
+.homepage_tab li {
+	height: 40px;
+	margin-bottom: 5px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 0 5px 5px 0;
+	box-shadow: 1px 1px 5px #999AA1;
+}
+.homepage_tab li.act {
+	background: #6EBA7B;
+	color: #fff;
+}
+.homepage_tab a {
+	display: block;
+}
 
-
-
-
+@media (min-width: 480px) {
+    .activitie_list_block {
+		border-right: 1px solid #999AA1;
+	}
+}
 
 

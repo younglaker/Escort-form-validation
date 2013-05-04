@@ -8,9 +8,6 @@
 <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
 <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css" />
 <link rel="stylesheet" href="css/public.css" />
-<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
-<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-<script type="text/javascript" src="js/mainjs.js"></script>
 </head>
 
 <body>
@@ -36,7 +33,7 @@
 					<ul class="nav">
 						<li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
 						<li class="divider-vertical"></li>
-						<li><a href="#"><i class="icon-file"></i> Pages</a></li>
+						<li><a href="homepage.html"><i class="icon-file"></i> Pages</a></li>
 						<li class="divider-vertical"></li>
 						<li><a href="#"><i class="icon-envelope"></i> Messages</a></li>
 						<li class="divider-vertical"></li>
@@ -67,7 +64,6 @@
 		</div>
 		<!--/.navbar-inner -->
 	</div>
-	<!--/.navbar -->
     <!--/ header -->
 
 	<!-- container -->
@@ -77,6 +73,7 @@
 		<div class="main">
 			<div class="span1 classify_nav hidden-phone">
 				<ul>
+					<li>分类</li>
 					<li class="act"><a href="">全部</a></li>
 					<li><a href="">讲座</a></li>
 					<li><a href="">招聘</a></li>
@@ -110,7 +107,7 @@
 			<div class="span8">
 
 				<ul class="time_picker span8">
-					<li>时间：</li>
+					<li>开始时间：</li>
 					<li class="act"><a href="">全部</a></li>
 					<li><a href="">今天</a></li>
 					<li><a href="">明天</a></li>
@@ -177,13 +174,13 @@
 						</div>
 					</div>
 				</div>
-			<!-- /activitie_list_block -->
+				<!-- /activitie_list_block -->
 
 				<!-- pager -->
-				<div class="pagination pagination-centered">
+				<div class="pagers pagination pagination-centered">
 					<ul>
 		                <li><a href="#">«</a></li>
-		                <li><a href="#">1</a></li>
+		                <li><a class="act" href="#">1</a></li>
 		                <li><a href="#">2</a></li>
 		                <li><a href="#">3</a></li>
 		                <li><a href="#">4</a></li>
@@ -252,7 +249,7 @@
 		<!-- /main -->
 
 		<!-- foorer -->
-		<div class="span11 footer">
+		<div class="span11 footer visible-desktop">
 			<p class="info">
 				<a href="link/about.html" target="_blank">关于我们</a>
 				<a href="link/join.html" target="_blank">加入我们</a>
@@ -270,6 +267,8 @@
 	</div>
 	<!-- /container -->
 
+<script type="text/javascript" src="js/sizzle.js"></script>
+<script type="text/javascript" src="js/mainjs.js"></script>
 </body>
 
 </html>
