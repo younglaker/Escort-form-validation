@@ -14,13 +14,6 @@ a:hover {
 }
 /***********   / public    **************/
 
-/***********    pager    **************/
-.pagers li a.act {
-	background: #0088D5;
-	color: #fff;
-}
-/***********   / pager    **************/
-
 
 /***********    footer   *************/
 .footer {
@@ -51,6 +44,22 @@ a:hover {
 /**************************    @media    ****************************/
 @media (max-width: 480px) {
     .hot_organizations ul li { margin: 10px; }
+}
+@media (min-width: 767px) { /*pad竖屏及以下尺寸时*/
+    .header1 {
+    	display: none;
+    }
+    .header2 {
+    	display: block;
+    }
+}
+@media (max-width: 767px) { /*pad竖屏及以上尺寸时*/
+    .header1 {
+    	display: block;
+    }
+    .header2 {
+    	/*display: none;*/
+    }
 }
 
 /**************************   / @media    ****************************/

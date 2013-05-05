@@ -65,10 +65,51 @@
 	display: block;
 }
 
-@media (min-width: 480px) {
+
+.footer_nav {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	margin: 0px;
+}
+.footer_nav .navbar-inner{
+	width: 100%;
+}
+.footer_items .footer_ico {
+	height: 30px;
+}
+.footer_items li {
+	width: 33%;
+	float: left;
+	border-right: 1px solid #fff;
+	line-height: 41px;
+}
+.footer_items li a {
+	color: #fff;
+	display: block;
+}
+.foot_main{
+	height: 43px;
+}
+.navbar {
+	background: #3e3e3e;
+	text-align: center;
+}
+.navbar .nav_title {
+	font-size: 16px;
+	line-height: 35px;
+	color: #fff;
+}
+
+@media (min-width: 480px) {		/*手机以上时*/
     .activitie_list_block {
 		border-right: 1px solid #999AA1;
 	}
 }
 
+@media (max-width: 480px) {		/*手机时*/
+    .activitie_list_block {
+		margin-bottom: 50px;
+	}
+}
 

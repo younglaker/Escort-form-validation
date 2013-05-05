@@ -8,7 +8,7 @@
 	margin: 0;
 }
 .classify_nav li {
-	width: 50px;
+	width: 80%;
 	margin-bottom: 5px;
 	padding-left: 5px;
 	padding: 7px;
@@ -78,6 +78,7 @@
 .activitie_list_box dt {
 	width: 78px;
 	float: left;
+	font-weight: 600;
 }
 .activitie_list_box dd {
 	width: 375px;
@@ -119,6 +120,11 @@
 
 /***********    /hot_organizations   *************/
 
+/**************************    @media    ****************************/
+
+
+
+/**************************   / @media    ****************************/
 
 /**************************   / main content    ****************************/
 
