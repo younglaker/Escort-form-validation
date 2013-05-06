@@ -14,32 +14,28 @@
 <link rel="stylesheet" href="css/homepage.css" />
 
     <!-- header -->
-	<div class="navbar">
+	<div class="navbar header">
 		<!--.navbar -->
 		<div class="navbar-inner">
 			<div class="container-fluid">
 
 				<a class="brand" href="index.html" name="top">乐活</a>
 
-				<div class="nav-collapse collapse">
+				<div class="">
 
 					<ul class="nav">
-						<li><a href="#"><i class="icon-home"></i> Home</a></li>
-						<li class="divider-vertical"></li>
-						<li class="active"><a href="homepage.html"><i class="icon-file"></i> Pages</a></li>
-						<li class="divider-vertical"></li>
-						<li><a href="#"><i class="icon-envelope"></i> Messages</a></li>
-						<li class="divider-vertical"></li>
+						<li class="active"><a href="#"><i class="icon-home"></i> 首页</a></li>
+						<li><a href="homepage.html"><i class="icon-file"></i> 我的主页</a></li>
 					</ul>
 
-					<form class="navbar-form form-search pull-left" method="" action="" accept-charset="UTF-8">
+					<form class="navbar-form form-search pull-left hidden-phone" method="" action="" accept-charset="UTF-8">
 						<div class="input-append">
 							<input type="text" name="q" class="span2 search-query" placeholder="找找有趣的活动">
 							<button type="submit" class="btn">搜索</button>
 						</div>
 					</form>
 
-					<div class="btn-group pull-right">
+					<div class="btn-group pull-right hidden-phone">
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 							<i class="icon-user"></i> admin	<span class="caret"></span>
 						</a>
@@ -63,11 +59,19 @@
 	<div class="container homepage_container">
 		<div class="span10 ">
 
+			<!-- info_nav -->
+			<ul class="span2 visible-phone homepage_tab_phone">
+				<li class="act">参与的活动</li>
+				<li><a href="">发起的活动</a></li>
+				<li><a href="">关注的人/组织</a></li>
+			</ul>
+			<!-- /info_nav -->	
+
 			<!-- user_basic_info -->
 			<div class="row">
 				<div class="span9">
 				    <div class="row">
-						<div class="span2  hidden-phone">
+						<div class="span2 hidden-phone">
 							<img src="img/user_gravator_large.png">
 						</div>
 				    	<div class="span6 user_profile">
@@ -185,12 +189,11 @@
 	<!-- /container -->
 
 	<!-- footer -->
-	<div class="footer_nav navbar navbar-inverse navbar-fixed-bottom">
+	<div class="footer_nav  navbar-inverse navbar-fixed-bottom">
 		<div class="navbar-inner">
 			<ul class="footer_items">
-				<li><a href="">参与的活动</a></li>
-				<li><a href="">发起的活动</a></li>
-				<li><a href="">关注的人/组织</a></li>
+				<li><a href="">首页</a></li>
+				<li><a href="">我的主页</a></li>
 			</ul>
 		</div>
 	</div>

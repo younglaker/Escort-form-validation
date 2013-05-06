@@ -55,7 +55,6 @@
 	text-align: center;
 	line-height: 40px;
 	border-radius: 0 5px 5px 0;
-	box-shadow: 1px 1px 5px #999AA1;
 }
 .homepage_tab li.act {
 	background: #6EBA7B;
@@ -64,22 +63,24 @@
 .homepage_tab a {
 	display: block;
 }
+.homepage_tab_phone li {
+	float: left;
+	border-radius: 5px 5px 0 0;
+	box-shadow: 1px 1px 5px #999AA1;
+}
 
 
 .footer_nav {
+	height: 35px;
 	position: fixed;
 	bottom: 0px;
-	width: 100%;
-	margin: 0px;
+	text-align: center;
 }
-.footer_nav .navbar-inner{
-	width: 100%;
-}
-.footer_items .footer_ico {
-	height: 30px;
+.footer_items {
+	margin: 0;
 }
 .footer_items li {
-	width: 33%;
+	width: 49.5%;
 	float: left;
 	border-right: 1px solid #fff;
 	line-height: 41px;
@@ -87,18 +88,6 @@
 .footer_items li a {
 	color: #fff;
 	display: block;
-}
-.foot_main{
-	height: 43px;
-}
-.navbar {
-	background: #3e3e3e;
-	text-align: center;
-}
-.navbar .nav_title {
-	font-size: 16px;
-	line-height: 35px;
-	color: #fff;
 }
 
 @media (min-width: 480px) {		/*手机以上时*/
