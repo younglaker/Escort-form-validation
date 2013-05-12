@@ -1,4 +1,4 @@
-/***********    public    **************/
+/***********        **************/
 
 div {
 	/*border: 1px solid #000;*/
@@ -12,7 +12,19 @@ a:hover {
 .main {
 	margin-top: 20px;
 }
-/***********   / public    **************/
+.marg_btom_20 {
+    margin-bottom: 20px;
+}
+.border_bottom_eee {
+    border-bottom: 1px solid #eee;
+}
+.border_bottom_aaa {
+    border-bottom: 1px solid #aaa;
+}
+.border_bottom_999AA1 {
+    border-bottom: 1px solid #999AA1;
+}
+/***********   /    **************/
 
 
 /***********    footer   *************/

@@ -55,6 +55,7 @@
 	text-align: center;
 	line-height: 40px;
 	border-radius: 0 5px 5px 0;
+	box-shadow: 1px 1px 5px #999AA1;
 }
 .homepage_tab li.act {
 	background: #6EBA7B;
