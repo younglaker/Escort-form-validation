@@ -1,26 +1,26 @@
 /***********    public    **************/
 
 div {
-	/*border: 1px solid #000;*/
+  /*border: 1px solid #000;*/
 }
 .classify_nav li a, .lassify_nav_phone li a, .time_picker li a {
-	display: block;
+  display: block;
 }
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 .main {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 /***********   / public    **************/
 
 
 /***********    footer   *************/
 .footer {
-	text-align: center;
+  text-align: center;
 }
 .footer .info a {
-	margin-left: 5px;
+  margin-left: 5px;
 }
 
 
@@ -43,23 +43,23 @@ a:hover {
 
 /**************************    @media    ****************************/
 @media (max-width: 480px) {
-    .hot_organizations ul li { margin: 10px; }
+  .hot_organizations ul li { margin: 10px; }
 }
 @media (min-width: 767px) { /*pad竖屏及以下尺寸时*/
-    .header1 {
-    	display: none;
-    }
-    .header2 {
-    	display: block;
-    }
+  .header1 {
+    display: none;
+}
+.header2 {
+  display: block;
+}
 }
 @media (max-width: 767px) { /*pad竖屏及以上尺寸时*/
-    .header1 {
-    	display: block;
-    }
-    .header2 {
-    	/*display: none;*/
-    }
+  .header1 {
+    display: block;
+}
+.header2 {
+  /*display: none;*/
+}
 }
 
 /**************************   / @media    ****************************/
