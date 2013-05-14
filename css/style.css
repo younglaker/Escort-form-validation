@@ -1,13 +1,13 @@
 /**************************    public    ****************************/
 
 div {
-	border: 1px solid #000;
+  border: 1px solid #000;
 }
 .classify_nav li a, .lassify_nav_phone li a, .time_picker li a {
-	display: block;
+  display: block;
 }
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 /**************************    /public    ****************************/
 
@@ -15,26 +15,26 @@ a:hover {
 /**************************    main content    ****************************/
 /***********    classify_nav   *************/
 .classify_nav {
-	padding: 10px;
+  padding: 10px;
 }
 .classify_nav li {
-	margin-bottom: 5px;
-	padding-left: 5px;
-	padding: 7px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  padding: 7px;
 }
 .classify_nav_phone {
-	width: 100%;
-	min-height: 50px;
+  width: 100%;
+  min-height: 50px;
 }
 .classify_nav_phone li {
-	float: left;
-	padding: 3px;
+  float: left;
+  padding: 3px;
 }
 .classify_nav li.act, .lassify_nav_phone li.act {
-	background: #6EBA7B;
+  background: #6EBA7B;
 }
 .classify_nav li:hover, .lassify_nav_phone li:hover {
-	background: #6EBA7B;
+  background: #6EBA7B;
 }
 
 /***********    /classify_nav   *************/
@@ -42,21 +42,21 @@ a:hover {
 
 /***********    time_picker   *************/
 .time_picker {
-	min-height: 30px;
-	margin: 0px;
-	padding: 10px;
-	overflow: hidden;
+  min-height: 30px;
+  margin: 0px;
+  padding: 10px;
+  overflow: hidden;
 }
 .time_picker li {
-	float: left;
-	margin-right: 5px;
-	padding: 5px;
+  float: left;
+  margin-right: 5px;
+  padding: 5px;
 }
 .time_picker li:hover {
-	background: #6EBA7B;
+  background: #6EBA7B;
 }
 .time_picker li.act {
-	background: #6EBA7B;
+  background: #6EBA7B;
 }
 
 /***********    /time_picker   *************/
@@ -64,25 +64,25 @@ a:hover {
 
 /***********    activitie_list   *************/
 .activitie_list_box {
-	min-height: 200px;
-	margin-bottom: 20px;
-	padding: 10px;
-	overflow: hidden;
+  min-height: 200px;
+  margin-bottom: 20px;
+  padding: 10px;
+  overflow: hidden;
 }
 .activitie_list_box h3 {
-	height: 35px;
-	overflow: hidden;
+  height: 35px;
+  overflow: hidden;
 }
 .activitie_list_box dt {
-	width: 78px;
-	float: left;
+  width: 78px;
+  float: left;
 }
 .activitie_list_box dd {
-	width: 375px;
-	float: left;
+  width: 375px;
+  float: left;
 }
 .activitie_list_box dt, .activitie_list_box dd {
-	margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 
@@ -90,38 +90,38 @@ a:hover {
 
 /***********    hot_activities   *************/
 .hot_activities {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .hot_activities ul {
-	margin-left: 0px;
+  margin-left: 0px;
 }
 .hot_activities ul li {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /***********    hot_activities   *************/
 
 /***********    hot_organizations   *************/
 .hot_organizations h4 a {
-	float: right;
-	font-size: 12px;
-	color: #EFB07C;
+  float: right;
+  font-size: 12px;
+  color: #EFB07C;
 }
 .hot_organizations ul li {
-	width: 50px;
-	float: left;
-	margin-right: 15px;
-	margin-bottom: 15px;
+  width: 50px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 /***********    hot_organizations   *************/
 
 /***********    footer   *************/
 .footer {
-	text-align: center;
+  text-align: center;
 }
 .footer .info a {
-	margin-left: 5px;
+  margin-left: 5px;
 }
 
 
@@ -146,7 +146,7 @@ a:hover {
 
 /**************************    @media    ****************************/
 @media (max-width: 480px) {
-    .hot_organizations ul li { margin: 10px; }
+  .hot_organizations ul li { margin: 10px; }
 }
 
 /**************************   / @media    ****************************/

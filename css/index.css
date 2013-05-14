@@ -1,37 +1,37 @@
 /**************************    main content    ****************************/
 /***********    classify_nav   *************/
 .classify_nav {
-	background: #eee;
+  background: #eee;
 }
 .classify_nav ul {
-	margin: 0;
+  margin: 0;
 }
 .classify_nav li {
-	width: 80%;
-	margin-bottom: 5px;
-	padding-left: 5px;
-	padding: 7px;
-	text-align: center;
-	word-spacing: 5px;
-	letter-spacing: 5px;
+  width: 80%;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  padding: 7px;
+  text-align: center;
+  word-spacing: 5px;
+  letter-spacing: 5px;
 }
 .classify_nav_phone {
-	width: 100%;
-	min-height: 50px;
+  width: 100%;
+  min-height: 50px;
 }
 .classify_nav_phone ul {
-	margin: 0;
+  margin: 0;
 }
 .classify_nav_phone li {
-	float: left;
-	margin-right: 5px;
-	padding: 3px;
+  float: left;
+  margin-right: 5px;
+  padding: 3px;
 }
 .classify_nav li.act, .classify_nav_phone li.act {
-	background: #6EBA7B;
+  background: #6EBA7B;
 }
 .classify_nav li a:hover, .classify_nav_phone li a:hover {
-	background: #6EBA7B;
+  background: #6EBA7B;
 }
 
 /***********    /classify_nav   *************/
@@ -39,22 +39,22 @@
 
 /***********    time_picker   *************/
 .time_picker {
-	min-height: 30px;
-	margin: 0px;
-	padding: 10px 0 10px 0;
-	overflow: hidden;
+  min-height: 30px;
+  margin: 0px;
+  padding: 10px 0 10px 0;
+  overflow: hidden;
 }
 .time_picker li {
-	float: left;
-	margin-right: 5px;
-	padding: 5px;
+  float: left;
+  margin-right: 5px;
+  padding: 5px;
 }
 .time_picker li a:hover {
-	background: #6EBA7B;
-	display: block;
+  background: #6EBA7B;
+  display: block;
 }
 .time_picker li.act {
-	background: #6EBA7B;
+  background: #6EBA7B;
 }
 
 /***********    /time_picker   *************/
@@ -62,30 +62,30 @@
 
 /***********    activitie_list   *************/
 .activitie_list_box {
-	min-height: 200px;
-	margin-bottom: 20px;
-	padding: 10px;
-	border-bottom: 1px solid #999AA1;
-	overflow: hidden;
+  min-height: 200px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #999AA1;
+  overflow: hidden;
 }
 .activitie_list_box h3 {
-	height: 54px;
-	overflow: hidden;
-	font-size: 22px;
-	line-height: 28px;
+  height: 54px;
+  overflow: hidden;
+  font-size: 22px;
+  line-height: 28px;
 }
 .activitie_list_box dt {
-	width: 78px;
-	float: left;
-	font-weight: 600;
+  width: 78px;
+  float: left;
+  font-weight: 600;
 }
 .activitie_list_box dd {
-	width: 375px;
-	float: left;
-	margin: 0;
+  width: 375px;
+  float: left;
+  margin: 0;
 }
 .activitie_list_box dt, .activitie_list_box dd {
-	margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 
@@ -93,31 +93,31 @@
 
 /***********    hot_activities   *************/
 .hot_activities {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .hot_activities ul {
-	margin-left: 0px;
+  margin-left: 0px;
 }
 .hot_activities ul li {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /***********    /hot_activities   *************/
 
 /***********    hot_organizations   *************/
 .hot_organizations h4 a {
-	float: right;
-	font-size: 12px;
-	color: #EFB07C;
+  float: right;
+  font-size: 12px;
+  color: #EFB07C;
 }
 .hot_organizations ul {
 	margin: 0;
 }
 .hot_organizations ul li {
-	width: 50px;
-	float: left;
-	margin-right: 15px;
-	margin-bottom: 15px;
+  width: 50px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 /***********    /hot_organizations   *************/
