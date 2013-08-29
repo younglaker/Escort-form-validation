@@ -1,5 +1,11 @@
-	octForm = (f) ->
+	EscortForm = (f) ->
 		form = $(f)
+
+		console.log "111"
+
+		form.attr("Escort", true)
+
+		console.log form.attr("Escort")
 
 		form.find("input, textarea, select").parent().append("<span class='help-inline tip-red oct-tips'>aaa</span>")
 
@@ -28,7 +34,7 @@
 			if qualified isnt true
 				return false
 
-			form.find(".oct-positivel").each -> 
+			form.find(".oct-positive").each -> 
 				val = @value
 				if isNaN(val) isnt NaN
 					if val <= 0
@@ -40,5 +46,18 @@
 					$(this).parent().find(".oct-tips").html("请填写正数")
 					qualified = false
 			
+			if qualified isnt true
+				return false
+
+			form.find("input, textarea, select").each ->
+				if @getAttribute("octmax")
+					if @value > @getAttribute("octmax")
+						$(this).parent().find(".oct-tips").html("太大了")
+						qualified = false
+				else if @octmax
+					if @value > @getAttribute("octmax")
+						$(this).parent().find(".oct-tips").html("太大了")
+						qualified = false
+
 			if qualified isnt true
 				return false
