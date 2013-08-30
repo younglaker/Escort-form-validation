@@ -5,7 +5,7 @@
     opts = $.extend({}, $.fn.EscortForm.options, options);
     selector = "input, textarea, select";
     form = this;
-    form.find(selector).parent().append("<span class='help-inline tip-red oct-tips'>aaa</span>");
+    form.find(selector).parent().append("<span class='help-inline tip-red es-tips'>aaa</span>");
     return form.submit(function() {
       var qualified, reg_email;
       qualified = true;
@@ -14,9 +14,9 @@
         if ($(this).attr("esRequired") === "true") {
           if (this.value === "") {
             qualified = false;
-            return $(this).parent().find(".oct-tips").html(opts.tip_required);
+            return $(this).parent().find(".es-tips").html(opts.tip_required);
           } else {
-            return $(this).parent().find(".oct-tips").html("");
+            return $(this).parent().find(".es-tips").html("");
           }
         }
       });
@@ -24,17 +24,45 @@
       if (qualified !== true) {
         return false;
       }
-      console.log("55");
       form.find(selector).each(function() {
         if ($(this).attr("esMax")) {
           if (this.value > $(this).attr("esMax")) {
             qualified = false;
-            return $(this).parent().find(".oct-tips").html(opts.tip_max + $(this).attr("esMax"));
+            return $(this).parent().find(".es-tips").html(opts.tip_max + $(this).attr("esMax"));
+          } else {
+            return $(this).parent().find(".es-tips").html("");
           }
         }
       });
-      alert("555");
       console.log("3" + qualified);
+      if (qualified !== true) {
+        return false;
+      }
+      form.find(selector).each(function() {
+        if ($(this).attr("esMin")) {
+          if (this.value < $(this).attr("esMin")) {
+            qualified = false;
+            return $(this).parent().find(".es-tips").html(opts.tip_min + $(this).attr("esMin"));
+          } else {
+            return $(this).parent().find(".es-tips").html("");
+          }
+        }
+      });
+      if (qualified !== true) {
+        return false;
+      }
+      form.find(selector).each(function() {
+        var mail;
+        if ($(this).attr("esEmail") === "true") {
+          mail = reg_email.test(this.value);
+          if (!mail) {
+            qualified = false;
+            return $(this).parent().find(".es-tips").html(opts.tip_email);
+          } else {
+            return $(this).parent().find(".es-tips").html("");
+          }
+        }
+      });
       if (qualified !== true) {
         return false;
       }
@@ -42,6 +70,8 @@
   };
   return $.fn.EscortForm.options = {
     tip_required: "Required here",
-    tip_max: "Can't lager than "
+    tip_max: "Can't lager than ",
+    tip_min: "Can't smaller than ",
+    tip_email: "Please enter correct email"
   };
 })(jQuery);
