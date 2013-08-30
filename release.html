@@ -44,7 +44,7 @@
                   活动地点：
                 </label>
                 <div class="controls">
-                  <input class="oct-required" octmax="5" name="location" type="text" value="" id="location"  esRequired="true">
+                  <input class="oct-required" esMax="5" name="location" type="text" value="" id="location"  esRequired="true">
                   <span class="help-inline tip-red">*</span>
                 </div>
               </div>
@@ -107,7 +107,9 @@
 
 
     <script type="text/javascript">
-      $("#realse-form").EscortForm();
+      $("#realse-form").EscortForm({
+        tip_required: "此处必填"
+      });
     </script>
 
  
