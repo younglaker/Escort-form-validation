@@ -14,7 +14,7 @@
         if ($(this).attr("esRequired") === "true") {
           if (this.value === "") {
             qualified = false;
-            return $(this).parent().find(".es-tips").html(opts.tip_required);
+            return $.fn.EscortForm.tips(this, opts.tip_required);
           } else {
             return $(this).parent().find(".es-tips").html("");
           }
@@ -25,10 +25,23 @@
         return false;
       }
       form.find(selector).each(function() {
+        if ($(this).attr("esNum") === "true") {
+          if (isNaN(this.value) === true) {
+            qualified = false;
+            return $.fn.EscortForm.tips(this, opts.tip_num);
+          } else {
+            return $(this).parent().find(".es-tips").html("");
+          }
+        }
+      });
+      if (qualified !== true) {
+        return false;
+      }
+      form.find(selector).each(function() {
         if ($(this).attr("esMax")) {
           if (this.value > $(this).attr("esMax")) {
             qualified = false;
-            return $(this).parent().find(".es-tips").html(opts.tip_max + $(this).attr("esMax"));
+            return $.fn.EscortForm.tips(this, opts.tip_max + $(this).attr("esMax"));
           } else {
             return $(this).parent().find(".es-tips").html("");
           }
@@ -42,7 +55,7 @@
         if ($(this).attr("esMin")) {
           if (this.value < $(this).attr("esMin")) {
             qualified = false;
-            return $(this).parent().find(".es-tips").html(opts.tip_min + $(this).attr("esMin"));
+            return $.fn.EscortForm.tips(this, opts.tip_min + $(this).attr("esMin"));
           } else {
             return $(this).parent().find(".es-tips").html("");
           }
@@ -57,7 +70,7 @@
           mail = reg_email.test(this.value);
           if (!mail) {
             qualified = false;
-            return $(this).parent().find(".es-tips").html(opts.tip_email);
+            return $.fn.EscortForm.tips(this, opts.tip_email);
           } else {
             return $(this).parent().find(".es-tips").html("");
           }
@@ -68,10 +81,15 @@
       }
     });
   };
-  return $.fn.EscortForm.options = {
+  $.fn.EscortForm.tips = function(s, text) {
+    return $(s).parent().find(".es-tips").html(text);
+  };
+  $.fn.EscortForm.options = {
     tip_required: "Required here",
+    tip_num: "Please enter a number",
     tip_max: "Can't lager than ",
     tip_min: "Can't smaller than ",
     tip_email: "Please enter correct email"
   };
+  return true;
 })(jQuery);
