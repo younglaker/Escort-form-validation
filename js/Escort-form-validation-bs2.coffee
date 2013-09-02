@@ -6,7 +6,7 @@
 
 		form = @
 
-		form.find(selector).parent().append "<span class='help-inline tip-red es-tips'>aaa</span>"
+		form.find(selector).closest(".controls").append "<span class='help-inline tip-red es-tips'></span>"
 
 		form.submit ->
 			qualified = true

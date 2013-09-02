@@ -5,7 +5,7 @@
     opts = $.extend({}, $.fn.EscortForm.options, options);
     selector = "input, textarea, select";
     form = this;
-    form.find(selector).parent().append("<span class='help-inline tip-red es-tips'>aaa</span>");
+    form.find(selector).closest(".controls").append("<span class='help-inline tip-red es-tips'>aaa</span>");
     return form.submit(function() {
       var qualified;
       qualified = true;

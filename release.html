@@ -25,7 +25,6 @@
                 </label>
                 <div class="controls">
                   <input class="span4" name="name" type="text" value="" id="name" aaa="5" esRequired="true" esRegex="^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$">
-                  <span class="help-inline tip-red">*</span>
                 </div>
               </div>
 
@@ -33,9 +32,10 @@
                 <label class="control-label" for="reservationtime">起止时间：</label>
                 <div class="controls">
                   <div class="input-prepend">
-                    <span class="add-on"><i class="icon-calendar"></i></span><input type="text" name="reservation" id="reservationtime" class="span4"/>
+                    <span class="add-on"><i class="icon-calendar"></i></span>
+                    <input type="text" name="reservation" id="reservationtime" class="span4"/>
+                    <span class='help-inline tip-red es-tips'>aaa</span>
                   </div>
-                  <span class="help-inline tip-red">*</span>
                 </div>
               </div>
          
@@ -45,7 +45,6 @@
                 </label>
                 <div class="controls">
                   <input name="location" type="text" value="" id="location" esRequired="true" esMatch="name">
-                  <span class="help-inline tip-red">*</span>
                 </div>
               </div>
          
@@ -55,7 +54,6 @@
                 </label>
                 <div class="controls">
                   <input class="oct-positive" name="people" type="number" value="" id="people" >
-                  <span class="help-inline tip-red">*</span>
                 </div>
               </div>
               
@@ -75,19 +73,8 @@
                     <option value="公益">公益</option>
                     <option value="其他">其他</option>
                   </select>
-                  <span class="help-inline tip-red">*</span>
                 </div>
               </div>
-         
-              <!-- <div class="control-group">
-                <label for="intro" class="control-label">  
-                  活动介绍：
-                </label>
-                <div class="controls">
-                  <textarea id="message" name="message" class="span6"  rows="10" ></textarea>
-                  <span class="help-inline tip-red">*</span>
-                </div>
-              </div> -->
          
               <div class="form-actions">
                 <button type="submit" class="btn btn-large btn-primary">发布活动</button>
