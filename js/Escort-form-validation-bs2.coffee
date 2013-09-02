@@ -24,6 +24,19 @@
 				return false
 
 			form.find(selector).each ->
+				if $(@).attr("esMatch")
+					name = $(@).attr("esMatch")
+					val = @value
+					t = @
+					form.find('[name='+name+']').each ->
+						if @value isnt val
+							qualified = false
+							$.fn.EscortForm.tips(t, opts.tip_mat)
+
+			if qualified isnt true
+				return false
+
+			form.find(selector).each ->
 				if $(@).attr("esNum") == "true"
 					if isNaN(@value) == true
 						qualified = false
@@ -109,6 +122,7 @@
 
 	$.fn.EscortForm.options =
 		tip_required: "Required here"
+		tip_mat: "Can't match last input"
 		tip_num: "Please enter a number"
 		tip_max: "Can't lager than "
 		tip_min: "Can't smaller than "

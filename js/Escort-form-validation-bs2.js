@@ -24,6 +24,23 @@
         return false;
       }
       form.find(selector).each(function() {
+        var name, t, val;
+        if ($(this).attr("esMatch")) {
+          name = $(this).attr("esMatch");
+          val = this.value;
+          t = this;
+          return form.find('[name=' + name + ']').each(function() {
+            if (this.value !== val) {
+              qualified = false;
+              return $.fn.EscortForm.tips(t, opts.tip_mat);
+            }
+          });
+        }
+      });
+      if (qualified !== true) {
+        return false;
+      }
+      form.find(selector).each(function() {
         if ($(this).attr("esNum") === "true") {
           if (isNaN(this.value) === true) {
             qualified = false;
@@ -110,7 +127,6 @@
         if ($(this).attr("esRegex")) {
           reg = new RegExp($(this).attr("esRegex"));
           test = reg.test(this.value);
-          console.log;
           if (!test) {
             qualified = false;
             return $.fn.EscortForm.tips(this, opts.tip_regex + $(this).attr("esRegex"));
@@ -129,6 +145,7 @@
   };
   $.fn.EscortForm.options = {
     tip_required: "Required here",
+    tip_mat: "Can't match last input",
     tip_num: "Please enter a number",
     tip_max: "Can't lager than ",
     tip_min: "Can't smaller than ",
