@@ -43,7 +43,8 @@
 					ele.regex.push(@)
 
 			$(ele.required).each ->
-				if @value == ""
+				val = $.fn.EscortForm.trim @value
+				if val == ""
 					qualified = false
 					$.fn.EscortForm.tips(@, opts.tip_required)
 				else
@@ -140,6 +141,12 @@
 
 	$.fn.EscortForm.tips = (s, text) ->
 		$(s).closest(".controls").find(".es-tips").html(text)
+
+	$.fn.EscortForm.trim = (str) ->
+		if (String.prototype.trim)
+			return str.trim()
+		else
+			return str.replace(/^\s+|\s+$/g, "")
 
 	$.fn.EscortForm.options =
 		tip_required: "Required here"

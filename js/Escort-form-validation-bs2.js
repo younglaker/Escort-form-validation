@@ -50,7 +50,9 @@
         }
       });
       $(ele.required).each(function() {
-        if (this.value === "") {
+        var val;
+        val = $.fn.EscortForm.trim(this.value);
+        if (val === "") {
           qualified = false;
           return $.fn.EscortForm.tips(this, opts.tip_required);
         } else {
@@ -162,6 +164,13 @@
   };
   $.fn.EscortForm.tips = function(s, text) {
     return $(s).closest(".controls").find(".es-tips").html(text);
+  };
+  $.fn.EscortForm.trim = function(str) {
+    if (String.prototype.trim) {
+      return str.trim();
+    } else {
+      return str.replace(/^\s+|\s+$/g, "");
+    }
   };
   $.fn.EscortForm.options = {
     tip_required: "Required here",
