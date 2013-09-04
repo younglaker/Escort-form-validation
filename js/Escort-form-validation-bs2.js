@@ -5,10 +5,11 @@
     opts = $.extend({}, $.fn.EscortForm.options, options);
     selector = "input, textarea, select";
     form = this;
-    form.find(selector).closest(".controls").append("<span class='help-inline tip-red es-tips'></span>");
     return form.submit(function() {
       var ele, qualified;
       qualified = true;
+      form.find("span").remove(".es-tips");
+      form.find(selector).closest(".controls").append("<span class='help-inline tip-red es-tips'></span>");
       ele = {
         required: [],
         match: [],

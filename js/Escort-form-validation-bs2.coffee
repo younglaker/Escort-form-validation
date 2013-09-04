@@ -6,11 +6,13 @@
 
 		form = @
 
-		form.find(selector).closest(".controls").append "<span class='help-inline tip-red es-tips'></span>"
 
 		form.submit ->
 			qualified = true
 			
+			form.find("span").remove(".es-tips")
+			form.find(selector).closest(".controls").append "<span class='help-inline tip-red es-tips'></span>"
+
 			ele = 
 				required: []
 				match: []
