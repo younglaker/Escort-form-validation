@@ -43,16 +43,17 @@
 				if $(@).attr("esRegex")
 					ele.regex.push(@)
 
+			# Check required
 			$(ele.required).each ->
 				val = $.fn.EscortForm.trim @value
 				if val == ""
-					# $.fn.EscortForm.tipBox @
 					qualified = false
 					$.fn.EscortForm.tips(@, opts.tip_required)
 
 			if qualified isnt true
 				return false
 
+			# Check match
 			$(ele.match).each ->
 				name = $(@).attr("esMatch")
 				val = @value
@@ -65,79 +66,88 @@
 			if qualified isnt true
 				return false
 
+			# Check num
 			$(ele.num).each ->
 				if isNaN(@value) == true
 					qualified = false
 					$.fn.EscortForm.tips(@, opts.tip_num)
-				else
-					$.fn.EscortForm.tips(@, "")
 
 			if qualified isnt true
 				return false
 
+			# Check max
 			$(ele.max).each ->
 				if @value > $(@).attr("esMax")
 					qualified = false
+					attr = $(@).attr("esMax")
+					opts.tip_max = $.fn.EscortForm.tipCheck(opts.tip_max, attr)
 					$.fn.EscortForm.tips(@, opts.tip_max)
-				else
-					$.fn.EscortForm.tips(@, "")
 
 			if qualified isnt true
 				return false
 
+			# Check min
 			$(ele.min).each ->
 				if @value < $(@).attr("esMin")
 					qualified = false
+					attr = $(@).attr("esMin")
+					opts.tip_min = $.fn.EscortForm.tipCheck(opts.tip_min, attr)
 					$.fn.EscortForm.tips(@, opts.tip_min)
-				else
-					$.fn.EscortForm.tips(@, "")
 						
 			if qualified isnt true
 				return false
 
+			# Check maxlen
 			$(ele.maxlen).each ->
 				if @value.length > $(@).attr("esMaxLen")	
 					qualified = false
+					attr = $(@).attr("esMaxLen")
+					opts.tip_maxlen = $.fn.EscortForm.tipCheck(opts.tip_maxlen, attr)
 					$.fn.EscortForm.tips(@, opts.tip_maxlen)
-				else
-					$.fn.EscortForm.tips(@, "")
 
 			if qualified isnt true
 				return false
 
+			# Check minlen
 			$(ele.minlen).each ->
 				if @value.length < $(@).attr("esMinLen")	
 					qualified = false
+					attr = $(@).attr("esMinLen")
+					opts.tip_minlen = $.fn.EscortForm.tipCheck(opts.tip_minlen, attr)
 					$.fn.EscortForm.tips(@, opts.tip_minlen)
-				else
-					$.fn.EscortForm.tips(@, "")
 
 			if qualified isnt true
 				return false
 
+			# Check email
 			$(ele.email).each ->
 				reg_email = /^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/
 				mail = reg_email.test(@value)
 				if not mail
 					qualified = false
 					$.fn.EscortForm.tips(@, opts.tip_email)
-				else
-					$.fn.EscortForm.tips(@, "")
 
 			if qualified isnt true
 				return false
 
+			# Check regex
 			$(ele.regex).each ->
 				reg = new RegExp($(@).attr("esRegex"))
 				test = reg.test(@value)
 				if not test
 					qualified = false
+					attr = $(@).attr("esRegex")
+					opts.tip_regex = $.fn.EscortForm.tipCheck(opts.tip_regex, attr)
 					$.fn.EscortForm.tips(@, opts.tip_regex)
-				else
-					$.fn.EscortForm.tips(@, "")
 
 			if qualified isnt true
 				return false
+
+	$.fn.EscortForm.tipCheck = (tip, attr) ->
+		if tip.match /_attr_/
+			return tip.replace(/_attr_/, attr)
+		else
+			return tip
 
 	$.fn.EscortForm.tips = (ele, text) ->
 		$(ele).closest(".controls").find("span").remove(".es-tips")

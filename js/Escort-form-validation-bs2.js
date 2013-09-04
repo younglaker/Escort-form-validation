@@ -79,52 +79,54 @@
         if (isNaN(this.value) === true) {
           qualified = false;
           return $.fn.EscortForm.tips(this, opts.tip_num);
-        } else {
-          return $.fn.EscortForm.tips(this, "");
         }
       });
       if (qualified !== true) {
         return false;
       }
       $(ele.max).each(function() {
+        var attr;
         if (this.value > $(this).attr("esMax")) {
           qualified = false;
+          attr = $(this).attr("esMax");
+          opts.tip_max = $.fn.EscortForm.tipCheck(opts.tip_max, attr);
           return $.fn.EscortForm.tips(this, opts.tip_max);
-        } else {
-          return $.fn.EscortForm.tips(this, "");
         }
       });
       if (qualified !== true) {
         return false;
       }
       $(ele.min).each(function() {
+        var attr;
         if (this.value < $(this).attr("esMin")) {
           qualified = false;
+          attr = $(this).attr("esMin");
+          opts.tip_min = $.fn.EscortForm.tipCheck(opts.tip_min, attr);
           return $.fn.EscortForm.tips(this, opts.tip_min);
-        } else {
-          return $.fn.EscortForm.tips(this, "");
         }
       });
       if (qualified !== true) {
         return false;
       }
       $(ele.maxlen).each(function() {
+        var attr;
         if (this.value.length > $(this).attr("esMaxLen")) {
           qualified = false;
+          attr = $(this).attr("esMaxLen");
+          opts.tip_maxlen = $.fn.EscortForm.tipCheck(opts.tip_maxlen, attr);
           return $.fn.EscortForm.tips(this, opts.tip_maxlen);
-        } else {
-          return $.fn.EscortForm.tips(this, "");
         }
       });
       if (qualified !== true) {
         return false;
       }
       $(ele.minlen).each(function() {
+        var attr;
         if (this.value.length < $(this).attr("esMinLen")) {
           qualified = false;
+          attr = $(this).attr("esMinLen");
+          opts.tip_minlen = $.fn.EscortForm.tipCheck(opts.tip_minlen, attr);
           return $.fn.EscortForm.tips(this, opts.tip_minlen);
-        } else {
-          return $.fn.EscortForm.tips(this, "");
         }
       });
       if (qualified !== true) {
@@ -137,28 +139,33 @@
         if (!mail) {
           qualified = false;
           return $.fn.EscortForm.tips(this, opts.tip_email);
-        } else {
-          return $.fn.EscortForm.tips(this, "");
         }
       });
       if (qualified !== true) {
         return false;
       }
       $(ele.regex).each(function() {
-        var reg, test;
+        var attr, reg, test;
         reg = new RegExp($(this).attr("esRegex"));
         test = reg.test(this.value);
         if (!test) {
           qualified = false;
+          attr = $(this).attr("esRegex");
+          opts.tip_regex = $.fn.EscortForm.tipCheck(opts.tip_regex, attr);
           return $.fn.EscortForm.tips(this, opts.tip_regex);
-        } else {
-          return $.fn.EscortForm.tips(this, "");
         }
       });
       if (qualified !== true) {
         return false;
       }
     });
+  };
+  $.fn.EscortForm.tipCheck = function(tip, attr) {
+    if (tip.match(/_attr_/)) {
+      return tip.replace(/_attr_/, attr);
+    } else {
+      return tip;
+    }
   };
   $.fn.EscortForm.tips = function(ele, text) {
     $(ele).closest(".controls").find("span").remove(".es-tips");

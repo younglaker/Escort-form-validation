@@ -43,7 +43,7 @@
                   活动地点：
                 </label>
                 <div class="controls">
-                  <input name="location" type="text" value="" id="location" esRequired="true" esMinLen="5">
+                  <input name="location" type="text" value="" id="location" esRequired="true" esMin="5">
                 </div>
               </div>
          
@@ -93,8 +93,11 @@
 
 
     <script type="text/javascript">
+      var attr = "_attr_"
       $("#realse-form").EscortForm({
-        tip_required: "此处必填"
+        tip_required: "此处必填",
+        tip_min: "Lager than " + attr + ", please.",
+        tip_regex: "No match " + attr
       });
     </script>
 
