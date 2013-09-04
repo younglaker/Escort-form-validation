@@ -80,7 +80,7 @@
 			$(ele.max).each ->
 				if @value > $(@).attr("esMax")
 					qualified = false
-					$.fn.EscortForm.tips(@, opts.tip_max + $(@).attr("esMax") )
+					$.fn.EscortForm.tips(@, opts.tip_max)
 				else
 					$.fn.EscortForm.tips(@, "")
 
@@ -90,7 +90,7 @@
 			$(ele.min).each ->
 				if @value < $(@).attr("esMin")
 					qualified = false
-					$.fn.EscortForm.tips(@, opts.tip_min + $(@).attr("esMin"))
+					$.fn.EscortForm.tips(@, opts.tip_min)
 				else
 					$.fn.EscortForm.tips(@, "")
 						
@@ -100,7 +100,7 @@
 			$(ele.maxlen).each ->
 				if @value.length > $(@).attr("esMaxLen")	
 					qualified = false
-					$.fn.EscortForm.tips(@, opts.tip_maxlen + $(@).attr("esMaxLen"))
+					$.fn.EscortForm.tips(@, opts.tip_maxlen)
 				else
 					$.fn.EscortForm.tips(@, "")
 
@@ -110,7 +110,7 @@
 			$(ele.minlen).each ->
 				if @value.length < $(@).attr("esMinLen")	
 					qualified = false
-					$.fn.EscortForm.tips(@, opts.tip_minlen + $(@).attr("esMinLen"))
+					$.fn.EscortForm.tips(@, opts.tip_minlen)
 				else
 					$.fn.EscortForm.tips(@, "")
 
@@ -134,7 +134,7 @@
 				test = reg.test(@value)
 				if not test
 					qualified = false
-					$.fn.EscortForm.tips(@, opts.tip_regex + $(@).attr("esRegex"))
+					$.fn.EscortForm.tips(@, opts.tip_regex)
 				else
 					$.fn.EscortForm.tips(@, "")
 
@@ -154,12 +154,12 @@
 		tip_required: "Required here"
 		tip_mat: "Can't match last input"
 		tip_num: "Please enter a number"
-		tip_max: "Can't lager than "
-		tip_min: "Can't smaller than "
-		tip_maxlen: "Can't longer than "
-		tip_minlen: "Can't shorter than "
+    tip_max: "Too large"
+    tip_min: "Too small"
+    tip_maxlen: "Too long"
+    tip_minlen: "Too short"
 		tip_email: "Please enter correct email"
-		tip_regex: "Not match the regex "
+		tip_regex: "Not match the regex"
 
 	return true
 
