@@ -9,7 +9,6 @@
       var ele, qualified;
       qualified = true;
       form.find("span").remove(".es-tips");
-      form.find(selector).closest(".controls").append("<span class='help-inline tip-red es-tips'></span>");
       ele = {
         required: [],
         match: [],
@@ -56,8 +55,6 @@
         if (val === "") {
           qualified = false;
           return $.fn.EscortForm.tips(this, opts.tip_required);
-        } else {
-          return $.fn.EscortForm.tips(this, "");
         }
       });
       if (qualified !== true) {
@@ -163,8 +160,10 @@
       }
     });
   };
-  $.fn.EscortForm.tips = function(s, text) {
-    return $(s).closest(".controls").find(".es-tips").html(text);
+  $.fn.EscortForm.tips = function(ele, text) {
+    $(ele).closest(".controls").find("span").remove(".es-tips");
+    $(ele).closest(".controls").append("<span class='help-inline tip-red es-tips'>aaa</span>");
+    return $(ele).closest(".controls").find(".es-tips").html(text);
   };
   $.fn.EscortForm.trim = function(str) {
     if (String.prototype.trim) {

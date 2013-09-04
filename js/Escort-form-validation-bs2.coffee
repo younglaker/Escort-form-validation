@@ -11,7 +11,6 @@
 			qualified = true
 			
 			form.find("span").remove(".es-tips")
-			form.find(selector).closest(".controls").append "<span class='help-inline tip-red es-tips'></span>"
 
 			ele = 
 				required: []
@@ -47,10 +46,9 @@
 			$(ele.required).each ->
 				val = $.fn.EscortForm.trim @value
 				if val == ""
+					# $.fn.EscortForm.tipBox @
 					qualified = false
 					$.fn.EscortForm.tips(@, opts.tip_required)
-				else
-					$.fn.EscortForm.tips(@, "")
 
 			if qualified isnt true
 				return false
@@ -141,8 +139,10 @@
 			if qualified isnt true
 				return false
 
-	$.fn.EscortForm.tips = (s, text) ->
-		$(s).closest(".controls").find(".es-tips").html(text)
+	$.fn.EscortForm.tips = (ele, text) ->
+		$(ele).closest(".controls").find("span").remove(".es-tips")
+		$(ele).closest(".controls").append "<span class='help-inline tip-red es-tips'>aaa</span>"
+		$(ele).closest(".controls").find(".es-tips").html(text)
 
 	$.fn.EscortForm.trim = (str) ->
 		if (String.prototype.trim)
