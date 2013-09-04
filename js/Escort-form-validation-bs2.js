@@ -92,7 +92,7 @@
       $(ele.max).each(function() {
         if (this.value > $(this).attr("esMax")) {
           qualified = false;
-          return $.fn.EscortForm.tips(this, opts.tip_max + $(this).attr("esMax"));
+          return $.fn.EscortForm.tips(this, opts.tip_max);
         } else {
           return $.fn.EscortForm.tips(this, "");
         }
@@ -103,7 +103,7 @@
       $(ele.min).each(function() {
         if (this.value < $(this).attr("esMin")) {
           qualified = false;
-          return $.fn.EscortForm.tips(this, opts.tip_min + $(this).attr("esMin"));
+          return $.fn.EscortForm.tips(this, opts.tip_min);
         } else {
           return $.fn.EscortForm.tips(this, "");
         }
@@ -114,7 +114,7 @@
       $(ele.maxlen).each(function() {
         if (this.value.length > $(this).attr("esMaxLen")) {
           qualified = false;
-          return $.fn.EscortForm.tips(this, opts.tip_maxlen + $(this).attr("esMaxLen"));
+          return $.fn.EscortForm.tips(this, opts.tip_maxlen);
         } else {
           return $.fn.EscortForm.tips(this, "");
         }
@@ -125,7 +125,7 @@
       $(ele.minlen).each(function() {
         if (this.value.length < $(this).attr("esMinLen")) {
           qualified = false;
-          return $.fn.EscortForm.tips(this, opts.tip_minlen + $(this).attr("esMinLen"));
+          return $.fn.EscortForm.tips(this, opts.tip_minlen);
         } else {
           return $.fn.EscortForm.tips(this, "");
         }
@@ -153,7 +153,7 @@
         test = reg.test(this.value);
         if (!test) {
           qualified = false;
-          return $.fn.EscortForm.tips(this, opts.tip_regex + $(this).attr("esRegex"));
+          return $.fn.EscortForm.tips(this, opts.tip_regex);
         } else {
           return $.fn.EscortForm.tips(this, "");
         }
@@ -177,12 +177,12 @@
     tip_required: "Required here",
     tip_mat: "Can't match last input",
     tip_num: "Please enter a number",
-    tip_max: "Can't lager than ",
-    tip_min: "Can't smaller than ",
-    tip_maxlen: "Can't longer than ",
-    tip_minlen: "Can't shorter than ",
+    tip_max: "Too large",
+    tip_min: "Too small",
+    tip_maxlen: "Too long",
+    tip_minlen: "Too short",
     tip_email: "Please enter correct email",
-    tip_regex: "Not match the regex "
+    tip_regex: "Not match the regex"
   };
   return true;
 })(jQuery);
