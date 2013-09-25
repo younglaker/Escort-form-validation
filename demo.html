@@ -37,7 +37,7 @@
                   </div>
                 </div>
               </div>
-         
+
               <div class="control-group">
                 <label for="location" class="control-label">  
                   活动地点：
@@ -46,7 +46,7 @@
                   <input name="location" type="text" value="" id="location" esRequired="true" esMin="5">
                 </div>
               </div>
-         
+
               <div class="control-group">
                 <label for="people" class="control-label">  
                   容纳人数：
@@ -95,6 +95,7 @@
     <script type="text/javascript">
       var attr = "_attr_"
       $("#realse-form").EscortForm({
+        version: 2,
         tip_required: "此处必填",
         tip_min: "Lager than " + attr + ", please.",
         tip_regex: "No match " + attr

@@ -12,7 +12,7 @@
 			
 			form.find("span").remove(".es-tips")
 
-			ele = 
+			ele =
 				required: []
 				match: []
 				num: []
@@ -43,12 +43,17 @@
 				if $(@).attr("esRegex")
 					ele.regex.push(@)
 
+			if opts.version == 2
+				addTip = $.fn.EscortForm.tips2
+			else if  opts.version == 3
+				addTip = $.fn.EscortForm.tips3
+
 			# Check required
 			$(ele.required).each ->
 				val = $.fn.EscortForm.trim @value
 				if val == ""
 					qualified = false
-					$.fn.EscortForm.tips(@, opts.tip_required)
+					addTip(@, opts.tip_required)
 
 			if qualified isnt true
 				return false
@@ -61,7 +66,7 @@
 				form.find('[name='+name+']').each ->
 					if @value isnt val
 						qualified = false
-						$.fn.EscortForm.tips(t, opts.tip_mat)
+						addTip(t, opts.tip_mat)
 
 			if qualified isnt true
 				return false
@@ -70,7 +75,7 @@
 			$(ele.num).each ->
 				if isNaN(@value) == true
 					qualified = false
-					$.fn.EscortForm.tips(@, opts.tip_num)
+					addTip(@, opts.tip_num)
 
 			if qualified isnt true
 				return false
@@ -81,7 +86,7 @@
 					qualified = false
 					attr = $(@).attr("esMax")
 					opts.tip_max = $.fn.EscortForm.tipCheck(opts.tip_max, attr)
-					$.fn.EscortForm.tips(@, opts.tip_max)
+					addTip(@, opts.tip_max)
 
 			if qualified isnt true
 				return false
@@ -92,7 +97,7 @@
 					qualified = false
 					attr = $(@).attr("esMin")
 					opts.tip_min = $.fn.EscortForm.tipCheck(opts.tip_min, attr)
-					$.fn.EscortForm.tips(@, opts.tip_min)
+					addTip(@, opts.tip_min)
 						
 			if qualified isnt true
 				return false
@@ -103,7 +108,7 @@
 					qualified = false
 					attr = $(@).attr("esMaxLen")
 					opts.tip_maxlen = $.fn.EscortForm.tipCheck(opts.tip_maxlen, attr)
-					$.fn.EscortForm.tips(@, opts.tip_maxlen)
+					addTip(@, opts.tip_maxlen)
 
 			if qualified isnt true
 				return false
@@ -114,7 +119,7 @@
 					qualified = false
 					attr = $(@).attr("esMinLen")
 					opts.tip_minlen = $.fn.EscortForm.tipCheck(opts.tip_minlen, attr)
-					$.fn.EscortForm.tips(@, opts.tip_minlen)
+					addTip(@, opts.tip_minlen)
 
 			if qualified isnt true
 				return false
@@ -125,7 +130,7 @@
 				mail = reg_email.test(@value)
 				if not mail
 					qualified = false
-					$.fn.EscortForm.tips(@, opts.tip_email)
+					addTip(@, opts.tip_email)
 
 			if qualified isnt true
 				return false
@@ -138,7 +143,7 @@
 					qualified = false
 					attr = $(@).attr("esRegex")
 					opts.tip_regex = $.fn.EscortForm.tipCheck(opts.tip_regex, attr)
-					$.fn.EscortForm.tips(@, opts.tip_regex)
+					addTip(@, opts.tip_regex)
 
 			if qualified isnt true
 				return false
@@ -149,10 +154,15 @@
 		else
 			return tip
 
-	$.fn.EscortForm.tips = (ele, text) ->
+	$.fn.EscortForm.tips2 = (ele, text) ->
 		$(ele).closest(".controls").find("span").remove(".es-tips")
 		$(ele).closest(".controls").append "<span class='help-inline tip-red es-tips'>aaa</span>"
 		$(ele).closest(".controls").find(".es-tips").html(text)
+
+	$.fn.EscortForm.tips3 = (ele, text) ->
+		$(ele).closest(".form-group").find("span").remove(".es-tips")
+		$(ele).closest(".form-group").append "<span class='help-inline tip-red es-tips'>aaa</span>"
+		$(ele).closest(".form-group").find(".es-tips").html(text)
 
 	$.fn.EscortForm.trim = (str) ->
 		if (String.prototype.trim)
@@ -161,6 +171,7 @@
 			return str.replace(/^\s+|\s+$/g, "")
 
 	$.fn.EscortForm.options =
+		version: 3
 		tip_required: "Required here"
 		tip_mat: "Can't match last input"
 		tip_num: "Please enter a number"
