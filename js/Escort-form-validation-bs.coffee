@@ -1,17 +1,30 @@
+###
+* Escort-form-validation v1.1
+* https://github.com/younglaker/Escort-form-validation
+* Description: A javascript validation plugin, now it is base on jquery and work on bootstrap2/3.
+* Copyright 2013, Laker Huang
+* Released under the MIT Licenses.
+* Date: 2013-09-26
+* PS: If you want to see the code comments, please see the coffeescript file.
+###
 ( ($) ->
 
 	$.fn.EscortForm = (options) ->
+
+		# Merge the default and customing options
 		opts = $.extend {}, $.fn.EscortForm.options, options
+
 		selector = "input, textarea, select"
 
+		# form: the current form need checked
 		form = @
-
 
 		form.submit ->
 			qualified = true
 			
 			form.find("span").remove(".es-tips")
 
+			# ele: store the dom for each type of check
 			ele =
 				required: []
 				match: []
@@ -23,6 +36,7 @@
 				email: []
 				regex: []
 
+			# Push each dom which need checked to the corresponding array.
 			form.find(selector).each ->
 				if $(@).attr("esRequired") == "true"
 					ele.required.push(@)
@@ -43,6 +57,7 @@
 				if $(@).attr("esRegex")
 					ele.regex.push(@)
 
+			# Check bootstrap version
 			if opts.version == 2
 				addTip = $.fn.EscortForm.tips2
 			else if  opts.version == 3
@@ -148,28 +163,33 @@
 			if qualified isnt true
 				return false
 
+	# Reaplace the "_attr_" with the value in html attribute user set
 	$.fn.EscortForm.tipCheck = (tip, attr) ->
 		if tip.match /_attr_/
 			return tip.replace(/_attr_/, attr)
 		else
 			return tip
 
+	# Add tips in Bootstrap 2
 	$.fn.EscortForm.tips2 = (ele, text) ->
 		$(ele).closest(".controls").find("span").remove(".es-tips")
 		$(ele).closest(".controls").append "<span class='help-inline tip-red es-tips'>aaa</span>"
 		$(ele).closest(".controls").find(".es-tips").html(text)
 
+	# Add tips in Bootstrap 3
 	$.fn.EscortForm.tips3 = (ele, text) ->
 		$(ele).closest(".form-group").find("span").remove(".es-tips")
 		$(ele).closest(".form-group").append "<span class='help-inline tip-red es-tips'>aaa</span>"
 		$(ele).closest(".form-group").find(".es-tips").html(text)
 
+	# Delete the space in the first and end of the string
 	$.fn.EscortForm.trim = (str) ->
 		if (String.prototype.trim)
 			return str.trim()
 		else
 			return str.replace(/^\s+|\s+$/g, "")
 
+	# Default bootstrap version and tips
 	$.fn.EscortForm.options =
 		version: 3
 		tip_required: "Required here"
