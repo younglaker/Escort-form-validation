@@ -113,7 +113,7 @@
 					attr = $(@).attr("esMin")
 					opts.tip_min = $.fn.EscortForm.tipCheck(opts.tip_min, attr)
 					addTip(@, opts.tip_min)
-						
+
 			if qualified isnt true
 				return false
 

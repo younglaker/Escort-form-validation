@@ -1,109 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css">
-    <link rel="stylesheet" href="css/Escort-form-validation.css" />
-  </head>
 
-  <body>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css">
+  <link rel="stylesheet" href="css/Escort-form-validation.css" />
+</head>
 
-    <!-- container -->
-    <div class="container">
-      <div class="span12" style="margin: 20px 0; ">
+<body>
+  <!-- container -->
+  <div class="container">
+    <div class="span12" style="margin: 20px 0; ">
+      <div class="row">
+        <div class="span12">
+          <!-- form -->
+          <form action="billing" method="post" class="form-horizontal" id="realse-form" accept-charset="utf-8">
 
-        <!-- add_act_info -->
-        <div class="row">
-          <div class="span12">
-            <form action="billing" method="post" class="form-horizontal" id="realse-form" accept-charset="utf-8">
-              <div class="control-group">
-                <label for="name" class="control-label"> 
-                  活动名称：
-                </label>
-                <div class="controls">
-                  <input class="span4" name="name" type="text" value="" id="name" aaa="5" esRequired="true" esRegex="^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$">
-                </div>
+            <div class="control-group">
+              <label for="required" class="control-label">Required:</label>
+              <div class="controls">
+                <input class="span4" name="required" type="text" esRequired="true">
               </div>
+            </div>
 
-              <div class="control-group">
-                <label class="control-label" for="reservationtime">起止时间：</label>
-                <div class="controls">
-                  <div class="input-prepend">
-                    <span class="add-on"><i class="icon-calendar"></i></span>
-                    <input type="text" name="reservation" id="reservationtime" class="span4"/>
-                    <span class='help-inline tip-red es-tips'>aaa</span>
-                  </div>
-                </div>
+            <div class="control-group">
+              <label for="match" class="control-label">The same as "required":</label>
+              <div class="controls">
+                <input class="span4" name="match" type="text" esMatch="required"  esRequired="true">
               </div>
+            </div>
 
-              <div class="control-group">
-                <label for="location" class="control-label">  
-                  活动地点：
-                </label>
-                <div class="controls">
-                  <input name="location" type="text" value="" id="location" esRequired="true" esMin="5">
-                </div>
+            <div class="control-group">
+              <label for="esNum" class="control-label">Number:</label>
+              <div class="controls">
+                <input class="span4" name="esNum" type="text" esNum="true" esRequired="true">
               </div>
+            </div>
 
-              <div class="control-group">
-                <label for="people" class="control-label">  
-                  容纳人数：
-                </label>
-                <div class="controls">
-                  <input class="oct-positive" name="people" type="number" value="" id="people" >
-                </div>
+            <div class="control-group">
+              <label for="esMax" class="control-label">Max number is 50:</label>
+              <div class="controls">
+                <input class="span4" name="esMax" type="text" esMax="50" esRequired="true">
               </div>
-              
-              <div class="control-group">
-                <label for="type" class="control-label"> 
-                  活动类型：
-                </label>
-                <div class="controls">
-                  <select name="type" id="type">
-                    <option value="讲座">讲座</option>
-                    <option value="招聘">招聘</option>
-                    <option value="娱乐">娱乐</option>
-                    <option value="比赛">比赛</option>
-                    <option value="招新">招新</option>
-                    <option value="出游">出游</option>
-                    <option value="活动">活动</option>
-                    <option value="公益">公益</option>
-                    <option value="其他">其他</option>
-                  </select>
-                </div>
-              </div>
-         
-              <div class="form-actions">
-                <button type="submit" class="btn btn-large btn-primary">发布活动</button>
-              </div>
-            </form>
-          </div>
-        </div>        
-        <!-- /add_act_info -->
+            </div>
 
+            <div class="control-group">
+              <label for="esMin" class="control-label">Mini number is 10:</label>
+              <div class="controls">
+                <input class="span4" name="esMin" type="text" esMin="10" esRequired="true">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label for="esMaxLen" class="control-label">Max length is 5:</label>
+              <div class="controls">
+                <input class="span4" name="esMaxLen" type="text" esMaxLen="5" esRequired="true">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label for="esMinLen" class="control-label">Mini length is 6:</label>
+              <div class="controls">
+                <input class="span4" name="esMinLen" type="text" esMinLen="6" esRequired="true">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label for="esEmail" class="control-label">Email:</label>
+              <div class="controls">
+                <input class="span4" name="esEmail" type="text" esEmail = "true" esRequired="true">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label for="" class="control-label">Start with capital letter:</label>
+              <div class="controls">
+                <input class="span4" name="" type="text" esRegex="^[A-Z]" esRequired="true">
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-large btn-primary">submit</button>
+            </div>
+
+          </form>
+          <!-- /form -->
+        </div>
       </div>
     </div>
-    <!-- /container -->
+  </div>
+  <!-- /container -->
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/Escort-form-validation-bs.js"></script>
+  <script type="text/javascript">
+  var attr = "_attr_"
+  $("#realse-form").EscortForm({
+    version: 2,
+    tip_required: "Please fill this.",
+    // tip_min: "Lager than " + attr + ", please.",
+    tip_regex: "No match " + attr
+  });
+  </script>
+</body>
 
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/Escort-form-validation-bs.js"></script>
-
-
-    <script type="text/javascript">
-      var attr = "_attr_"
-      $("#realse-form").EscortForm({
-        version: 2,
-        tip_required: "此处必填",
-        tip_min: "Lager than " + attr + ", please.",
-        tip_regex: "No match " + attr
-      });
-    </script>
-
- 
-  </body>
-
- 
 </html>
